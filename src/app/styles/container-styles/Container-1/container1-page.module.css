@@ -1,0 +1,17 @@
+.img1 {
+  height: 725px;
+  width: 100%;
+}
+
+.h1text {
+  font-size: 50px;
+  position: relative;
+  top: -400px;
+  background-color: white;
+  padding: 10px;
+}
+
+.container {
+  height: 729px;
+  overflow: hidden;
+}/*# sourceMappingURL=container1-page.module.css.map */
