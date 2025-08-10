@@ -13,10 +13,10 @@ export default function (){
     return(
         <div className={styles.containerForm}>
         <form action={formGestore} className={styles.form}>
-            <input type="text" name="email" required className={styles.formInputs}/>
+            <input type="text" name="email" required className={styles.formInputs} placeholder="input your email"/>
             <br />
             <br />
-            <input type="password" name="password" required className={styles.formInputs}/>
+            <input type="password" name="password" required className={styles.formInputs} placeholder="input your password"/>
             <br />
             <br />
             <input type="submit" placeholder="submit" className={styles.formInputs}/>
