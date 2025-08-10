@@ -20,6 +20,10 @@ export default function (){
             <br />
             <br />
             <input type="submit" placeholder="submit" className={styles.formInputs}/>
+            <br /><br />
+            {
+                
+            }
         </form>
         <Image src={registerImage} alt="" className={styles.Image1}></Image>
         </div>
