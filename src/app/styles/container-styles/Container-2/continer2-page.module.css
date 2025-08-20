@@ -13,18 +13,22 @@
 }
 
 .form {
-  height: 250px;
+  height: 270px;
   background-color: gray;
   padding-top: 5px;
   display: inline-block;
   float: inline-start;
   position: relative;
   top: 100px;
+  margin-left: 410px;
+  padding: 10px;
 }
 
 .image1 {
   height: 250px;
   width: 250px;
+  position: relative;
+  top: 100px;
 }
 
 .containerForm {
@@ -32,4 +36,21 @@
   width: 930px;
   position: relative;
   left: 330px;
+}
+
+.responseBoll {
+  height: 12px;
+  padding: 18px 0 26px 185px;
+  font-size: 11px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 209, 0);
+}
+
+.responseBoll1 {
+  height: 12px;
+  padding: 5px;
+  font-size: 11px;
+  color: rgb(255, 255, 255);
+  padding: 18px 0 26px 150px;
+  background-color: rgb(206, 0, 0);
 }/*# sourceMappingURL=continer2-page.module.css.map */

@@ -1,0 +1,1 @@
+export type GetApi = FormData

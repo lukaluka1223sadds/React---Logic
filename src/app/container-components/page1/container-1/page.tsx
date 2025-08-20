@@ -1,6 +1,6 @@
 import Image from "next/image"
-import img from "../../../../public/blogging-570x321-1-570x321-2lm9ons.png"
-import styles from "../../styles/container-styles/Container-1/container1-page.module.css"
+import img from "../../../../../public/blogging-570x321-1-570x321-2lm9ons.png"
+import styles from "../../../styles/container-styles/Container-1/container1-page.module.css"
 export default function Container_1(){
     return(
         <div  className={styles.container}>
