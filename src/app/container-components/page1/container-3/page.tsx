@@ -9,7 +9,7 @@ export default function Container_3() {
     const sliceForm = useSelector((state: RootState) => state.formresponse.boll)
     return (
         <div className={styles.container_3}>
-            {sliceForm == "true" && <Container3component></Container3component>}
+            {sliceForm == "true" && <Container3component ></Container3component>}
         </div>
     )
 }

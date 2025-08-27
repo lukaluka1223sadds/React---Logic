@@ -1,14 +1,16 @@
 "use state"
 
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import styles from "../../../styles/container-styles/Container-3/page.module.css"
 import { RootState } from "@/app/redux-toolkit/store"
 import { useEffect, useState } from "react"
+import { changePage } from "@/app/redux-toolkit/slices/slice2/selectPage"
 
 
 export default function Container3component() {
     const [size, setSize] = useState("container3before")
     const selectForminfo = useSelector((state: RootState) => state.formInfo)
+    const dispatch = useDispatch()
     console.log(selectForminfo)
 
     useEffect(() => {
@@ -20,12 +22,11 @@ export default function Container3component() {
             } else {
                 setSize( "container3after" )
             }
-            console.log(size)
-            console.log(boll)
         },1000)
     }, [])
+
     function a(){
-        console.log("clicked")
+        dispatch(changePage("principalPage"))
     }
 
     return (
