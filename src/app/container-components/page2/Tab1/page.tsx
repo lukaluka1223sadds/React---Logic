@@ -13,7 +13,7 @@ export function Tab1() {
 
   useEffect(() => {
     const apiRoute = fetch("/api/fetchRequest", {
-      method: "POST",
+      method: "POST", 
       headers: {
         "Content-Type": "application/json",
       },
