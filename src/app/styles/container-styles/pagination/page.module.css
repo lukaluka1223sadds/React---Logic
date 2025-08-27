@@ -1,0 +1,13 @@
+.Image{
+    float: inline-end;
+    position: absolute;
+    top: -7px;
+    left: 1300px;
+}
+
+.span{
+    position: absolute;
+    float: inline-end;
+    margin-top: 20px;
+    left: 1370px;
+}

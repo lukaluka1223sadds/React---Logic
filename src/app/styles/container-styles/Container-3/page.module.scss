@@ -1,18 +1,31 @@
-.container3{
+.container3before{
     height: 100px;
     width: 371px;
     background-color: rgb(43, 43, 43);
     color: white;
     box-sizing: content-box;
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
     position: relative;
-    left: 425px;
+    left: 445px;
     top: 40px
 }
 
+.container3after{
+    height: 100px;
+    width: 371px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    box-sizing: content-box;
+    border-radius: 20px;
+    position: relative;
+    padding: 40px;
+    left: 435px;
+    top: 30px;
+}
+
 .container_3{
-    height: 220px;
+    height: 320px;
     width: 100%;
     background-color: rgb(168, 168, 168);
 }

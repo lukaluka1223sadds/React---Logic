@@ -1,0 +1,31 @@
+.Tab1{
+    width: 93%;
+    margin: 50px;
+    justify-content: space-between;
+    column-gap: 25px;
+    row-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3 , 410px);
+}
+
+.videosInfos{
+    margin-left: 10px;
+}
+
+.Image{
+     border-radius: 4%
+}
+
+.icons{
+    height: 100px;
+    width: 1px;
+    z-index: 1;
+    top: 5px;
+    position: absolute;
+    & :global(svg){
+        font-size: 40px;
+        position: relative;
+        left: 340px;
+        top: 15px;
+    }
+}
