@@ -1,4 +1,4 @@
-import { IChildren } from "@/app/common/interfaces/redux-toolkit";
+import { IChildren } from "@/app/common/interfaces/quadrato";
 import styles from "../../styles/component-styles/quadrato/page.module.css";
 import { useContext } from "react";
 import { ProvaContext } from "@/app/contextApi/page2Context/store";
