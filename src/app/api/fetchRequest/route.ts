@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST() {
   const response = await fetch("https://picsum.photos/v2/list?limit=21");
   const data = await response.json();
 

@@ -4,5 +4,5 @@ import { createContext } from "react";
 
 export const ProvaContext = createContext <IProvaContextType>({
     quadratoKey:"-1",
-    setQuadratoKey:(e:string)=>{}
+    setQuadratoKey:()=>{}
 })

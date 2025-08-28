@@ -2,13 +2,12 @@
 
 import styles from "../../../styles/container-styles/Container-2/continer2-page.module.css"
 import Image from "next/image"
-import GestoreSubmitForm from "./formUseServer/page"
-import { ChangeEvent, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "@/app/redux-toolkit/store"
 import { setFormStatus } from "@/app/redux-toolkit/slices/slice1/form"
-import { formGestore } from "./function"
-import { UserInfo } from "@/app/redux-toolkit/slices/slice1/formresponse"
+import { Infos } from "./utils/infos/page"
+import { formGestoresend } from "./utils/formGestoreSend/page"
 
 export default function Container_2() {
     const [info, setInfo] = useState({ email: "", password: "" })
@@ -16,38 +15,18 @@ export default function Container_2() {
     const bollMessage = useSelector((state: RootState) => state.formresponse)
     const formstatus = useSelector((state:RootState)=>state.formresponse.boll)
 
-    async function formGestoresend (e:FormData){
-        const getUser = await formGestore(e)
-        console.log("wwwwwwwwwwwwwwwwwwww")
-        console.log(getUser)
-        dispatch(UserInfo(getUser))
-    }
-    
-    function infos(e: ChangeEvent<HTMLInputElement>) {
-        if (e.target.name == "email") {
-            setInfo({
-                email: e.target.value,
-                password: info.password
-            })
-        } else {
-            setInfo({
-                email: info.email,
-                password: e.target.value
-            })
-        }
-    }
-    const emailPassword = { email: info.email, password: info.password }
-    useEffect(() => { dispatch(setFormStatus(emailPassword)) }, [formstatus])
+    useEffect(() => {
+         const emailPassword = { email: info.email, password: info.password }
+        dispatch(setFormStatus(emailPassword)) 
+    }, [formstatus, dispatch , info.email, info.password])
 
-    
-    
     return (
         <div className={styles.continer2}>
-            <form action={formGestoresend} className={styles.form}>
-                <input type="text" name="email" required onChange={infos} className={styles.formInputs} placeholder="input your email" />
+            <form action={(event)=>formGestoresend(event , dispatch)} className={styles.form}>
+                <input type="text" name="email" required onChange={(event)=>setInfo(Infos(info , event))} className={styles.formInputs} placeholder="input your email" />
                 <br />
                 <br />
-                <input type="password" name="password" onChange={infos} required className={styles.formInputs} placeholder="input your password" />
+                <input type="password" name="password" onChange={(event)=>setInfo(Infos(info , event))} required className={styles.formInputs} placeholder="input your password" />
                 <br />
                 <br />
                 <button type="submit" className={styles.formInputs}>submit</button>

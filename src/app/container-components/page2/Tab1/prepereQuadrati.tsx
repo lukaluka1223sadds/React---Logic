@@ -4,12 +4,12 @@ import Quadrato from "../../../components/quadrato/page";
 import Image from "next/image";
 import styles from "../../../styles/container-styles/page2/Container-1/page.module.css";
 import { IQuadratiCreator } from "@/app/common/interfaces/page2createQuadrati";
-import { getRandomInt } from "@/app/lib/page2_Tab1/randomNumber";
+import { getRandomInt } from "@/app/lib/page2/randomNumber";
 import { useContext, useMemo } from "react";
 import { ClockCircleTwoTone, ProfileTwoTone } from "@ant-design/icons";
 import { ProvaContext } from "@/app/contextApi/page2Context/store";
 
-export default function quadratiPrepere({
+export default function QuadratiPrepere({
   e,
   componentNumber,
 }: {

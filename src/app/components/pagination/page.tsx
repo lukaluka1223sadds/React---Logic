@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from "react";
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
@@ -58,7 +58,7 @@ const App: React.FC = () => (
       style={{ margin: "0px 30px 0px 30px" }}
       items={Items}
       onChange={onChange}
-    />{" "}
+    />
   </>
 );
 
