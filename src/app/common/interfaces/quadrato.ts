@@ -1,6 +1,6 @@
 export interface IChildren{
     children:React.ReactNode
-    MouseEnter:string
-    MouseLeave:string
+    MouseEnter:()=>string
+    MouseLeave:()=>string
     componentNumber:string
 }

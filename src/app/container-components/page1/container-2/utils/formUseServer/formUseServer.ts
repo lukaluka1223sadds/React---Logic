@@ -1,7 +1,7 @@
 "use server";
-import { GestoreSubmitForm_ } from "@/app/common/interfaces/container2form";
+import { IGestoreSubmitForm_ } from "@/app/common/interfaces/container2form";
 
-export default async function GestoreSubmitForm(e: GestoreSubmitForm_) {
+export default async function GestoreSubmitForm(e: IGestoreSubmitForm_) {
   if (e.email === "magradzeluka39@gmail.com" && e.password === "luka") {
     return {
       message: "login is sucess",

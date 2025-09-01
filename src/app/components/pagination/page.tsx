@@ -7,8 +7,8 @@ import {
   CalendarOutlined,
   CommentOutlined,
 } from "@ant-design/icons";
-import { Logo } from "@/app/components/logo/page";
-import { Tab1 } from "../../container-components/page2/Tab1/page";
+import Logo from "@/app/components/logo/Logo";
+import { Tab1 } from "../../container-components/page2/Tab1/Tab";
 import Image from "next/image";
 import styles from "../../styles/container-styles/pagination/page.module.css";
 

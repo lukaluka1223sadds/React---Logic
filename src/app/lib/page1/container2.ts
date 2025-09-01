@@ -1,9 +1,13 @@
-import GestoreSubmitForm from "../../container-components/page1/container-2/utils/formUseServer/page";
+import GestoreSubmitForm from "../../container-components/page1/container-2/utils/formUseServer/formUseServer";
 
-export async function formGestore(e: FormData) {
+interface S{
+    email: string, password: string
+}
+
+export async function formGestore(e: S) {
   const response = await GestoreSubmitForm({
-    email: e.get("email")?.toString() as string,
-    password: e.get("password")?.toString() as string,
+    email: e.email?.toString() as string,
+    password: e.password?.toString() as string,
   });
   const message = response.message;
   const boll = response.boll;

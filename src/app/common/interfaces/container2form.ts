@@ -1,15 +1,18 @@
-export interface GestoreSubmitForm_{
+export interface IGestoreSubmitForm_{
     email:string,
     password:string
 }
 
-export interface Slice1Initialstate {
+export interface ISlice1Initialstate {
     email:string,
     password:string
 }
 
-export interface SliceResponseFormInitialstate {
+export interface ISliceResponseFormInitialstate {
     boll:string,
     message:string
 }
 
+export interface IEmailPassword{
+    email: string, password: string
+}

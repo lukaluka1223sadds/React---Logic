@@ -5,7 +5,6 @@ const Slice2 = createSlice({
     initialState:"pageRegistration",
     reducers:{
         changePage(state , action:PayloadAction<string>){
-            state = action.payload
             return action.payload
         }
     }

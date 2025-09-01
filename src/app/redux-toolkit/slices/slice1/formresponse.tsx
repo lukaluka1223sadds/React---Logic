@@ -1,13 +1,13 @@
-import { SliceResponseFormInitialstate } from "@/app/common/interfaces/container2form";
+import { ISliceResponseFormInitialstate } from "@/app/common/interfaces/container2form";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: SliceResponseFormInitialstate = { boll: "", message: "" };
+const initialState: ISliceResponseFormInitialstate = { boll: "", message: "" };
 
 const FormResponseSlice = createSlice({
   name: "FormResponse",
   initialState,
   reducers: {
-    UserInfo(state, action: PayloadAction<SliceResponseFormInitialstate>) {
+    UserInfo(state, action: PayloadAction<ISliceResponseFormInitialstate>) {
       state.boll = action.payload.boll;
       state.message = action.payload.message;
     },

@@ -1,6 +1,6 @@
 "use client";
 
-import Quadrato from "../../../components/quadrato/page";
+import Quadrato from "../../../components/quadrato/Quadrato";
 import Image from "next/image";
 import styles from "../../../styles/container-styles/page2/Container-1/page.module.css";
 import { IQuadratiCreator } from "@/app/common/interfaces/page2createQuadrati";
@@ -9,21 +9,15 @@ import { useContext, useMemo } from "react";
 import { ClockCircleTwoTone, ProfileTwoTone } from "@ant-design/icons";
 import { ProvaContext } from "@/app/contextApi/page2Context/store";
 
-export default function QuadratiPrepere({
-  e,
-  componentNumber,
-}: {
-  e: IQuadratiCreator;
-  componentNumber: string;
-}) {
+export default function QuadratiPrepere({e, componentNumber}: {e: IQuadratiCreator; componentNumber: string}) {
   const { quadratoKey } = useContext(ProvaContext);
   const daysAgo = useMemo(() => getRandomInt(0, 30), []);
   return (
     <Quadrato
       key={componentNumber}
       componentNumber={componentNumber}
-      MouseEnter={componentNumber}
-      MouseLeave={"-1"}
+      MouseEnter={()=>componentNumber}
+      MouseLeave={()=>"-1"}
     >
       <Image
         src={e.download_url}
