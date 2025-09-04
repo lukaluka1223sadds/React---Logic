@@ -1,10 +1,11 @@
+import { IOphenPage } from "@/app/common/interfaces/redux-toolkit";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const Slice3 = createSlice({
     name:"ophen video",
-    initialState:"page0",
+    initialState:{page:"",componentNumber:"",image:"",channelName:""},
     reducers:{
-        changePage(state,action:PayloadAction<string>){
+        changePage(state,action:PayloadAction<IOphenPage>){
             return action.payload
         }
     }

@@ -1,8 +1,8 @@
 "use client";
 
-import Quadrato from "../../../components/quadrato/Quadrato";
+import Quadrato from "../../../../components/quadrato/Quadrato";
 import Image from "next/image";
-import styles from "../../../styles/container-styles/page2/Container-1/page.module.css";
+import styles from "../../../../styles/container-styles/page2/Container-1/page.module.css";
 import { IQuadratiCreator } from "@/app/common/interfaces/page2createQuadrati";
 import { getRandomInt } from "@/app/lib/page2/randomNumber";
 import { useContext, useMemo } from "react";
@@ -18,6 +18,10 @@ export default function QuadratiPrepere({e, componentNumber}: {e: IQuadratiCreat
       componentNumber={componentNumber}
       MouseEnter={()=>componentNumber}
       MouseLeave={()=>"-1"}
+      image={e.download_url}
+      height= "290px"
+      width= "410px"
+      channelName={e.author}
     >
       <Image
         src={e.download_url}

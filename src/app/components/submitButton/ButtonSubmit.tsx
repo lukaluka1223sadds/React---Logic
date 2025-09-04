@@ -2,6 +2,6 @@ import styles from "../../styles/component-styles/submitButton/submitButton.modu
 
 export function SubmitButton(){
         return(
-            <button type="submit" className={styles.formInputs}>submit</button>
+            <button type="submit" className={styles.formInputs} suppressHydrationWarning={true}>submit</button>
         )
 }

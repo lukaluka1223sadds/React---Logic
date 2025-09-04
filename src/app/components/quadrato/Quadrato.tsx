@@ -10,15 +10,22 @@ import { RootState } from "@/app/redux-toolkit/store";
 export default function Quadrato(e: IChildren) {
   const {setQuadratoKey } = useContext(ProvaContext)
   const selectSlice = useSelector((state:RootState)=>state.ClickOphenVideo)
-  
- const dispatch = useDispatch()
-useEffect(()=>{console.log(selectSlice)},[selectSlice])
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (selectSlice.componentNumber === e.componentNumber) {
+      console.log(selectSlice);
+    }
+  }, [selectSlice,e.componentNumber])
   return (
     <div
       className={styles.quadrato}
-      onMouseEnter={()=>setQuadratoKey(e.MouseEnter())}
-      onMouseLeave={()=>setQuadratoKey(e.MouseLeave())}
-      onClick={()=>dispatch(changePage(selectSlice == "page0" ? "page1" : "page0"))}
+      style={{
+        height: e.height,
+        width: e.width
+      }}
+      onMouseEnter={()=>e.MouseEnter?setQuadratoKey(e.MouseEnter()): null}
+      onMouseLeave={()=>e.MouseLeave ? setQuadratoKey(e.MouseLeave()) : null}
+      onClick={()=>dispatch(changePage({page:"ophenedPage",componentNumber:e.componentNumber,image:e.image,channelName:e.channelName}))}
     >
       {e.children}
     </div>

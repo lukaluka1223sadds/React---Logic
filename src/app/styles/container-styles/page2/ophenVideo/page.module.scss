@@ -1,0 +1,147 @@
+// Variables for consistent styling
+$primary-red: red;
+$background-black: black;
+$opacity-overlay: 0.3;
+$light-gray: rgb(231, 231, 231);
+$medium-gray: rgb(214, 212, 212);
+$black: rgb(0, 0, 0);
+
+// Mixins
+@mixin linea {
+  width: 900px;
+  height: 5px;
+  background-color: $primary-red;
+  transform: translate(50px, -100px);
+  position: relative;
+}
+
+@mixin div-overlay {
+  height: 550px;
+  width: 1000px;
+  background-color: $background-black;
+  opacity: $opacity-overlay;
+  position: relative;
+}
+
+// Line styles
+.mouseEnterLinea {
+  @include linea;
+  opacity: 1;
+  z-index: 1;
+}
+
+.mouseLeaveLinea {
+  @include linea;
+  opacity: 0;
+}
+
+// Video positioning
+.Video {
+  position: absolute;
+}
+
+// Overlay div styles
+.mouseEnterDiv {
+  @include div-overlay;
+  z-index: 1;
+}
+
+.mouseLeaveDiv {
+  @include div-overlay;
+  z-index: -1;
+}
+
+// Layout
+.HomeDiv {
+  display: grid;
+  grid-template-columns: 1000px 460px;
+}
+
+.h1 {
+  height: 640px;
+  width: 3px;
+  background-color: $light-gray;
+  margin: 5px 22px 0 15px;
+}
+
+// Icons section
+.Icons {
+  & > * {
+    font-size: 55px;
+  }
+  position: relative;
+  top: -300px;
+  left: 400px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.IconsAfter {
+  @extend .Icons;
+  z-index: 0 !important;
+}
+
+// Video list
+.ophenedPageVideos {
+  display: flex;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  width: 0;
+  box-sizing: border-box;
+}
+
+.Col {
+  height: 650px;
+  width: 420px;
+  overflow: auto;
+}
+
+// Like/Dislike button
+.LikeDislike {
+  height: 50px;
+  width: 200px;
+  background-color: $medium-gray;
+  border-radius: 15px;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  display: flex;
+  transform: translate(320px, 10px);
+
+  & > * {
+    font-size: 19px;
+  }
+}
+
+// Image styles
+.ImageIcon {
+  border-radius: 50px;
+}
+
+.P {
+  display: inline;
+  color: $black;
+}
+
+// Image info
+.ImageInfoDiv {
+  display: flex;
+  position: relative;
+  top: -40px;
+  height: 40px;
+}
+
+.h2 {
+  position: relative;
+  top: 15px;
+  left: 30px;
+}
+
+// Download button
+.downloadVideo {
+  font-size: 22px;
+  position: relative;
+  top: 19px;
+  left: 350px;
+}

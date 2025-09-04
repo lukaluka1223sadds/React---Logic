@@ -1,0 +1,126 @@
+.mouseEnterLinea {
+  width: 900px;
+  height: 5px;
+  background-color: red;
+  transform: translate(50px, -100px);
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.mouseLeaveLinea {
+  width: 900px;
+  height: 5px;
+  background-color: red;
+  transform: translate(50px, -100px);
+  position: relative;
+  opacity: 0;
+}
+
+.Video {
+  position: absolute;
+}
+
+.mouseEnterDiv {
+  height: 550px;
+  width: 1000px;
+  background-color: black;
+  opacity: 0.3;
+  position: relative;
+  z-index: 1;
+}
+
+.mouseLeaveDiv {
+  height: 550px;
+  width: 1000px;
+  background-color: black;
+  opacity: 0.3;
+  position: relative;
+  z-index: -1;
+}
+
+.HomeDiv {
+  display: grid;
+  grid-template-columns: 1000px 460px;
+}
+
+.h1 {
+  height: 640px;
+  width: 3px;
+  background-color: rgb(231, 231, 231);
+  margin: 5px 22px 0 15px;
+}
+
+.Icons, .IconsAfter {
+  position: relative;
+  top: -300px;
+  left: 400px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+}
+.Icons > *, .IconsAfter > * {
+  font-size: 55px;
+}
+
+.IconsAfter {
+  z-index: 0 !important;
+}
+
+.ophenedPageVideos {
+  display: flex;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  width: 0;
+  box-sizing: border-box;
+}
+
+.Col {
+  height: 650px;
+  width: 420px;
+  overflow: auto;
+}
+
+.LikeDislike {
+  height: 50px;
+  width: 200px;
+  background-color: rgb(214, 212, 212);
+  border-radius: 15px;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  display: flex;
+  transform: translate(320px, 10px);
+}
+.LikeDislike > * {
+  font-size: 19px;
+}
+
+.ImageIcon {
+  border-radius: 50px;
+}
+
+.P {
+  display: inline;
+  color: rgb(0, 0, 0);
+}
+
+.ImageInfoDiv {
+  display: flex;
+  position: relative;
+  top: -40px;
+  height: 40px;
+}
+
+.h2 {
+  position: relative;
+  top: 15px;
+  left: 30px;
+}
+
+.downloadVideo {
+  font-size: 22px;
+  position: relative;
+  top: 19px;
+  left: 350px;
+}/*# sourceMappingURL=page.module.css.map */

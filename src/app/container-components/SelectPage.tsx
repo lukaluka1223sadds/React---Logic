@@ -10,7 +10,7 @@ export default function Home() {
   const selectSlice = useSelector((state:RootState)=>state.changePage)
   return (
     <div>
-      {selectSlice == "pageRegistration" ? <PageRegistration/>: <HomePage></HomePage>}
+      {selectSlice == "pageRegistration" ? <PageRegistration/> : <HomePage></HomePage>}
     </div>
   );
 }
